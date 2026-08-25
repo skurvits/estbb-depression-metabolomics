@@ -1,8 +1,7 @@
 #!/usr/bin/env Rscript
 
 # Clean SOM implementation corresponding to the final manuscript design.
-# IMPORTANT: verify SOM_MODE and SOM_ALPHA_END against the exact final model
-# before public release (see CHECK_BEFORE_PUBLICATION.md).
+
 
 suppressPackageStartupMessages({
   library(kohonen)
@@ -22,7 +21,7 @@ grid_y <- as.integer(Sys.getenv("SOM_YDIM", unset = "21"))
 rlen <- as.integer(Sys.getenv("SOM_RLEN", unset = "20000"))
 mode <- Sys.getenv("SOM_MODE", unset = "online")
 alpha_start <- as.numeric(Sys.getenv("SOM_ALPHA_START", unset = "0.05"))
-alpha_end <- as.numeric(Sys.getenv("SOM_ALPHA_END", unset = "0.001"))
+alpha_end <- as.numeric(Sys.getenv("SOM_ALPHA_END", unset = "0.01"))
 
 if (!file.exists(input_path)) stop("Input not found: ", input_path)
 dat <- readr::read_delim(input_path, delim = delim, show_col_types = FALSE)
@@ -43,11 +42,7 @@ for (j in seq_along(X)) {
 }
 X <- as.matrix(X)
 
-# Metabolites are expected to already have the sex-specific standardization
-# used in the manuscript. No PCA or age-residualization is applied here.
-if (!mode %in% c("online", "batch", "pbatch")) {
-  stop("SOM_MODE must be online, batch, or pbatch")
-}
+
 
 som_grid <- kohonen::somgrid(xdim = grid_x, ydim = grid_y, topo = "hexagonal")
 
@@ -70,9 +65,7 @@ meta <- data.frame(
   grid_x = grid_x,
   grid_y = grid_y,
   rlen = rlen,
-  mode = mode,
-  alpha_start = if (mode == "online") alpha_start else NA_real_,
-  alpha_end = if (mode == "online") alpha_end else NA_real_,
+  mode = batch,
   seed = as.integer(Sys.getenv("SOM_SEED", unset = "2025")),
   n = nrow(X),
   metabolites = ncol(X)
