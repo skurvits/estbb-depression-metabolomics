@@ -96,7 +96,6 @@ export SOM_MODEL_PATH=/path/to/som_model.rds
 Rscript R/04_som_clustering_qc.R
 ```
 
-**Important:** before public release, verify the final SOM training mode and learning-rate settings against the exact model used for the manuscript. See `CHECK_BEFORE_PUBLICATION.md`.
 
 ## Statistical conventions
 
@@ -112,7 +111,6 @@ Rscript R/04_som_clustering_qc.R
 
 The manuscript analysis was performed in R. Core packages used by the cleaned scripts include `dplyr`, `tidyr`, `readr`, `purrr`, `broom`, `ggplot2`, `patchwork`, `scales`, `kohonen`, `cluster`, and `clusterCrit`.
 
-For archival publication, create a GitHub release and archive that release in Zenodo, then cite the Zenodo DOI in the manuscript Code Availability statement.
 
 ## License
 
