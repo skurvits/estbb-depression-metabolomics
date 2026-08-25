@@ -1,0 +1,31 @@
+VERIFIED PRIMARY MetWAS NUMBERS
+Bonferroni threshold: 1.4343087e-05
+Model 1 significant pairs: 1367
+Model 2 significant pairs: 660
+Model 3 significant pairs: 136
+BMI interaction candidate pairs (M2 OR M3 significant): 691
+
+MODEL 2 -> MODEL 3 RETENTION (same pair significant in both)
+Weight gain: 0/199 retained (0.0%); median attenuation 0.882
+Weight loss: 2/115 retained (1.7%); median attenuation 0.861
+Appetite/weight change: 1/81 retained (1.2%); median attenuation 0.674
+Insomnia: 21/48 retained (43.8%); median attenuation 0.064
+Fatigue: 1/10 retained (10.0%); median attenuation 0.200
+Attention: 2/5 retained (40.0%); median attenuation 0.134
+Depressed mood: 16/21 retained (76.2%); median attenuation 0.042
+Hopelessness: 9/19 retained (47.4%); median attenuation 0.126
+Thoughts of death: 20/26 retained (76.9%); median attenuation 0.141
+Anhedonia: 13/57 retained (22.8%); median attenuation 0.410
+Worthlessness: 10/12 retained; 5 NEW in M3; median attenuation -0.114
+Low self-confidence: 6/6 retained; 4 NEW in M3; median attenuation -0.089
+
+BMI INTERACTION SCAN
+Successful candidate rows: 691
+FDR < 0.05: 211
+beta range: -0.08781 to 0.07844
+interaction OR range: 0.9159 to 1.082
+
+CORRECTED SOM FOLLOW-UP
+Pairs tested: 211
+FDR < 0.05: 3
+NOTE: update all Figure 4/S9 manuscript p/FDR/OR claims from the corrected output.
