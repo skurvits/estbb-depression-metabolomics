@@ -14,6 +14,4 @@
 
 ## Files intentionally omitted
 
-The original analysis was developed iteratively. The public repository should **not** include exploratory scripts that are not part of the final reported workflow, including alternative PCA/age-standardized SOMs, sign-flip screening scripts, hand-selected metabolite experiments, or earlier versions of the figures.
-
-Those scripts are useful for private provenance but would make the public repository harder to interpret and could create ambiguity about which analysis generated the manuscript results.
+The original analysis was developed iteratively. The public repository does **not** include exploratory scripts that are not part of the final reported workflow.
