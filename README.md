@@ -1,6 +1,6 @@
 # Depression symptoms × metabolomics in the Estonian Biobank
 
-Cleaned analysis code accompanying the manuscript **“Metabolic profile of 14 lifetime depression symptoms and body mass index in the Estonian Biobank.”**
+Cleaned analysis code accompanying the manuscript **“Body mass index modifies symptom-specific metabolomic associations with depressive symptoms in the Estonian Biobank.”**
 
 This repository contains the minimal code needed to reproduce the *reported analysis logic* from analysis-ready Estonian Biobank data. It intentionally omits exploratory scripts, abandoned SOM configurations, one-off plotting experiments, and participant-level data.
 
